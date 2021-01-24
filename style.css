@@ -4,16 +4,18 @@ body{
     margin: 0;
     padding: 0;
     font-family: arial;
+    background-color: #f1f1f1;
 }
 
 .logo{
     width: 100%;
-    background-color: #FFC857;
-    padding: 6px 0px 6px 0px;
+    background-color: #21209c;
+    padding: 4px 0px 4px 0px;
 }
 
 .logo h1{
     text-align: center;
+    color:#fdb827;
 }
 
 #canvas{
@@ -29,9 +31,49 @@ body{
 }
 
 .menu-buttons button{
-    padding:12px;
+    padding:10px;
+    margin-left: 12px;
+    background-color: #21209c;
+    color:#fdb827;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.menu-buttons button:hover{
+    transform: scale(1.1);
 }
 
 .sliders{
     text-align: center;
 }
+
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 20px; 
+    height: 25px; 
+    background: #21209c;
+    cursor: pointer; 
+  }
+
+  .sliders p{
+      font-size: 20px;
+      font-weight: bold;
+  }
