@@ -1,11 +1,13 @@
 var Arr = [];
 var len = Arr.length;
 
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext("2d");
 
 
 generateArray(50);
 randomArray();
-printArray(Arr);
+drawArray(Arr);
 
 
 
@@ -27,7 +29,7 @@ printArray(Arr);
 
             swap(Arr,index,random);
         }
-        // draw the array;
+        drawArray(Arr);
         return Arr;
   }
 
@@ -36,6 +38,19 @@ printArray(Arr);
       arr[i] = arr[j];
       arr[j] = temp;
       return arr;
+  }
+
+  function drawArray(arr){
+    var x = 0;
+    var wid = canvas.width / len ;
+    ctx.clearRect(0 , 0 , canvas.width , canvas.height);
+      for (var i = 0 ; i < len ; i++){
+        ctx.beginPath();
+        ctx.fillStyle = "#424242";
+        ctx.fillRect (x , (canvas.height) - arr[i] * (wid/2) , wid , (canvas.height));
+        ctx.closePath();
+        x+= wid;
+      }
   }
 
     function printArray (arr){
