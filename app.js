@@ -59,6 +59,13 @@ drawArray(Arr);
       }
   }
 
+  function worstCase(){
+    var tmp = len;
+    for (var i = 0 ; i < len ; i++){
+      Arr[i] = tmp--;
+    }
+    drawArray(Arr);
+  }
 
 range.oninput = function(){
   generateArray(range.value);
