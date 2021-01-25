@@ -37,8 +37,6 @@ drawArray(Arr);
         return Arr;
   }
 
-  
-
   function swap (arr, i , j){
       var temp = arr[i];
       arr[i] = arr[j];
@@ -63,6 +61,29 @@ drawArray(Arr);
     var tmp = len;
     for (var i = 0 ; i < len ; i++){
       Arr[i] = tmp--;
+    }
+    drawArray(Arr);
+  }
+
+  function selectionSort (){
+    for (var i = 0 ; i < len ; i++){
+        var min = i;
+        for (var j = i+1 ; j < len ;  j++){
+          if (Arr[j] < Arr[min])
+            min = j;
+        }
+        swap(Arr, min , i);
+         drawArray(Arr);
+    }
+    
+  }
+
+  function bubbleSort (){
+    for (var i = 0 ; i < len ; i++){
+      for (var j = 0 ; j < len - i - 1 ; j++){
+        if (Arr[j] > Arr[j+1])
+            swap(Arr, j, j+1);
+      }
     }
     drawArray(Arr);
   }
