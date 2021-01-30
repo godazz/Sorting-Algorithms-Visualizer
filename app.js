@@ -51,7 +51,7 @@ drawArray(Arr);
       for (var i = 0 ; i < len ; i++){
         ctx.beginPath();
         ctx.fillStyle = "#424242";
-        ctx.fillRect (x, (canvas.height) - arr[i] * (wid/3), Math.floor(wid) -1 , (canvas.height));
+        ctx.fillRect (x, (canvas.height) - arr[i] * (wid/3), Math.floor(wid) -2 , (canvas.height));
         ctx.closePath();
         x+= wid;
       }
@@ -94,5 +94,4 @@ range.oninput = function(){
   randomArray();
   drawArray(Arr);
 }
-
-   
+  
